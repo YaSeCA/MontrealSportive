@@ -1,5 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/yacine/Documents/WEB_AVANCE/Web_Avance_Projet_Session'
-flask run
-make: Leaving directory '/home/yacine/Documents/WEB_AVANCE/Web_Avance_Projet_Session'
- 
