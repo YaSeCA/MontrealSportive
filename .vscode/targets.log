@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun  6 23:46:55 2022
+# Make data base, printed on Tue Jun  7 00:02:49 2022
 
 # Variables
 
@@ -101,7 +101,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 50050
+GIO_LAUNCHED_DESKTOP_FILE_PID = 51536
 # automatic
 %F = $(notdir $%)
 # environment
@@ -151,7 +151,7 @@ FLASK_ENV = development
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d1bb7ab0-b69d-44e8-88e9-8d409a53096d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2c702a24-fd95-46aa-8ff5-f777b179b962.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -213,7 +213,7 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LANG = C
 # environment
-VSCODE_PID = 50050
+VSCODE_PID = 51536
 # variable set hash-table stats:
 # Load=101/1024=10%, Rehash=0, Collisions=13/126=10%
 
@@ -274,6 +274,6 @@ run:
 # strcache performance: lookups = 28 / hit rate = 17%
 # hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=1/28=4%
-# Finished Make data base on Mon Jun  6 23:46:55 2022
+# Finished Make data base on Tue Jun  7 00:02:49 2022
 
  
