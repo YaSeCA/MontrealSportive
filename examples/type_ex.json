@@ -1,0 +1,47 @@
+{
+    "Example":"http://127.0.0.1:5000/api/installation-type?type=aquatique",
+    "Installations_Aquatiques": [
+      {
+        "ADRESSE": "955, Rue Marie-Anne Est", 
+        "ARRONDISSE": "Le Plateau-Mont-Royal", 
+        "EQUIPEME": "Piscine r\u00e9cr\u00e9ative", 
+        "GESTION": "Municipale", 
+        "ID_UEV": 1017231, 
+        "LAT": 45.526243, 
+        "LONG": -73.577899, 
+        "NOM": "Bain L\u00e9vesque", 
+        "POINT_X": "298715,0666", 
+        "POINT_Y": "5042928684", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      }, 
+      {
+        "ADRESSE": "1 875, Avenue Morgan", 
+        "ARRONDISSE": "Mercier\u2013Hochelaga-Maisonneuve", 
+        "EQUIPEME": "Piscine r\u00e9cr\u00e9ative", 
+        "GESTION": "Municipale", 
+        "ID_UEV": 2065901, 
+        "LAT": 45.553456, 
+        "LONG": -73.538296, 
+        "NOM": "Bain Morgan", 
+        "POINT_X": "301810,6112", 
+        "POINT_Y": "5045950116", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      }, 
+      {
+        "ADRESSE": "1\u00a0550, Rue Dufresne", 
+        "ARRONDISSE": "Ville-Marie", 
+        "EQUIPEME": "Piscine r\u00e9cr\u00e9ative", 
+        "GESTION": "Municipale", 
+        "ID_UEV": 1018523, 
+        "LAT": 45.52886, 
+        "LONG": -73.548969, 
+        "NOM": "Bain Quintal", 
+        "POINT_X": "300975,7246", 
+        "POINT_Y": "5043217592", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      }
+    ]
+  }

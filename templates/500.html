@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>Installations Sportives Extérieurs Montréal - Error 404</title>
+{% endblock head %}
+
+{% block body %}
+
+    {% if defaut %}
+        <div class="msg-error">
+            <p class="one">
+                500 - Le serveur n'est pas en mesure de traiter la situation
+            </p>
+            <img src="/static/images/data-center-fire.jpg" alt="Un champ vide avec un mouton" class="sheep">
+        </div>
+    {% endif %}
+
+{% endblock body %} 

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}{% endblock head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="/static/js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"
+</head>
+
+<body>
+    {% block header %}
+        <div class="wrapper">
+            <header>
+                <a href="/" class="logo">Montréal<span>Sportive</span></a>
+        
+                <nav>
+                    <svg class="close" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5 0.25C13.2861 0.25 10.1443 1.20305 7.47199 2.98862C4.79969 4.77419 2.71689 
+                        7.31209 1.48697 10.2814C0.257041 13.2507 -0.0647633 16.518 0.562247 19.6702C1.18926 22.8224 
+                        2.73692 25.7179 5.00952 27.9905C7.28213 30.2631 10.1776 31.8108 13.3298 32.4378C16.482 33.0648 
+                        19.7493 32.743 22.7186 31.513C25.6879 30.2831 28.2258 28.2003 30.0114 25.528C31.797 22.8557 32.75 
+                        19.7139 32.75 16.5C32.75 14.366 32.3297 12.2529 31.5131 10.2814C30.6964 8.30985 29.4994 6.51847 27.9905 
+                        5.00952C26.4815 3.50056 24.6902 2.3036 22.7186 1.48696C20.7471 0.670319 18.634 0.25 16.5 0.25ZM20.9038 
+                        18.5963C21.0561 18.7473 21.177 18.927 21.2595 19.1251C21.342 19.3231 21.3844 19.5355 21.3844 
+                        19.75C21.3844 19.9645 21.342 20.1769 21.2595 20.3749C21.177 20.573 21.0561 20.7527 20.9038 
+                        20.9038C20.7527 21.0561 20.573 21.177 20.3749 21.2594C20.1769 21.3419 19.9645 21.3844 19.75 
+                        21.3844C19.5355 21.3844 19.3231 21.3419 19.1251 21.2594C18.927 21.177 18.7473 21.0561 18.5963 
+                        20.9038L16.5 18.7913L14.4038 20.9038C14.2527 21.0561 14.073 21.177 13.8749 21.2594C13.6769 
+                        21.3419 13.4645 21.3844 13.25 21.3844C13.0355 21.3844 12.8231 21.3419 12.6251 21.2594C12.427 
+                        21.177 12.2473 21.0561 12.0963 20.9038C11.9439 20.7527 11.8231 20.573 11.7406 20.3749C11.6581 
+                        20.1769 11.6156 19.9645 11.6156 19.75C11.6156 19.5355 11.6581 19.3231 11.7406 19.1251C11.8231 
+                        18.927 11.9439 18.7473 12.0963 18.5963L14.2088 16.5L12.0963 14.4038C11.7903 14.0978 11.6184 
+                        13.6827 11.6184 13.25C11.6184 12.8173 11.7903 12.4022 12.0963 12.0963C12.4023 11.7903 12.8173 
+                        11.6184 13.25 11.6184C13.6827 11.6184 14.0978 11.7903 14.4038 12.0963L16.5 14.2088L18.5963 
+                        12.0963C18.9023 11.7903 19.3173 11.6184 19.75 11.6184C20.1827 11.6184 20.5978 11.7903 20.9038 
+                        12.0963C21.2098 12.4022 21.3817 12.8173 21.3817 13.25C21.3817 13.6827 21.2098 14.0978 20.9038 
+                        14.4038L18.7913 16.5L20.9038 18.5963Z" fill="black"/>
+                    </svg>
+        
+                    <ul>
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="/doc">Documentation</a></li>
+                        <li><button class="enregistrer" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">S'enregistrer</button></li>
+                        <li><button class="connexion" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Connexion</button></li>
+                    </ul>
+                </nav>
+        
+                <svg class="menu" viewBox="0 0 54 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="54" height="5" fill="black"/>
+                    <rect y="13" width="41" height="5" fill="#ED2E38"/>
+                    <rect y="26" width="33" height="5" fill="black"/>
+                </svg>
+            </header>
+
+            <section class="msg">
+                <p class="text">Obtenir l'information sur la <span>COVID-19</span> : 
+                    <a href="https://montreal.ca/articles/covid-19-etat-des-lieux-et-des-services-municipaux-5013">ici</a></p>
+            </section>
+        </div>
+
+        <div id="id01" class="modal">
+        
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="static/images/avatar.png" alt="Avatar" class="avatar">
+            </div>
+        
+            <div class="container">
+                <label for="uname"><b>Addresse mail</b></label>
+                <input type="text" placeholder="Entrer addresse mail" name="uname" required>
+            
+                <label for="psw"><b>Mot de passe</b></label>
+                <input type="password" placeholder="Entrer mot de passe" name="psw" required>
+                    
+                <button type="submit">Se connecter</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Se rappeler de moi
+                </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annulé</button>
+                <span class="psw"><a href="#">Mot de passe oublié? </a> </span>
+            </div>
+        </form>
+        </div>
+
+        <div id="id02" class="modal">
+        
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="static/images/avatar.png" alt="Avatar" class="avatar">
+                </div>
+            
+                <div class="container">
+                    <label for="uname"><b>Addresse mail</b></label>
+                    <input type="text" placeholder="Entrer addresse mail" name="uname" required>
+                
+                    <label for="psw"><b>Mot de passe</b></label>
+                    <input type="password" placeholder="Entrer mot de passe" name="psw" required>
+
+                    <label for="psw"><b>Confirmer mot de passe</b></label>
+                    <input type="password" placeholder="Confirmer mot de passe" name="psw" required>
+                        
+                    <button type="submit">S'enregistrer</button>
+                </div>
+            
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Annulé</button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            const menu = document.querySelector('.menu')
+            const close = document.querySelector('.close')
+            const nav = document.querySelector('nav')
+    
+            menu.addEventListener('click', () => {
+                nav.classList.add('open-nav')
+            })
+    
+            close.addEventListener('click', () => {
+                nav.classList.remove('open-nav')
+            })
+
+            // Get the modal
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            
+            /* Full-width input fields */
+                input[type=text], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            
+            /* Set a style for all buttons */
+            button {
+                background-color: #04AA6D;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+            
+            button:hover {
+                opacity: 0.8;
+            }
+            
+            .imgcontainer
+            {
+                z-index: 999;
+            }
+
+            .container
+            {
+                z-index: 999;
+            }
+
+            /* Extra styles for the cancel button */
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #ed2e38;
+            }
+
+            .connexion {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #ed2e38;
+                font-size: 0.9rem;
+                margin-top: 0.3em;
+            }
+
+            .enregistrer {
+                width: auto;
+                padding: 10px 18px;
+                background-color: black;
+                font-size: 0.9rem;
+                margin-top: 0.3em;
+            }
+
+            @media only screen and (min-width: 1300px) {
+                .connexion {
+                    width: auto;
+                    padding: 10px 18px;
+                    background-color: #ed2e38;
+                    font-size: 1.3rem;
+                    margin-top: 0.2em;
+                }
+
+                .enregistrer {
+                    width: auto;
+                    padding: 10px 18px;
+                    background-color: black;
+                    font-size: 1.3rem;
+                    margin-top: 0.2em;
+                }
+            }
+            
+            /* Center the image and position the close button */
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+                position: relative;
+            }
+            
+            img.avatar {
+                width: 20%;
+                border-radius: 50%;
+            }
+            
+            .container {
+                padding: 16px;
+            }
+            
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+
+            span.psw a {
+                color: #04AA6D;
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+            
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                padding-top: 60px;
+            }
+            
+            /* Modal Content/Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                border: 1px solid #888;
+                width: 80%; /* Could be more or less, depending on screen size */
+            }
+            
+            /* The Close Button (x) */
+            .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+            }
+            
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+            
+            /* Add Zoom Animation */
+            .animate {
+                -webkit-animation: animatezoom 0.6s;
+                animation: animatezoom 0.6s
+            }
+            
+            @-webkit-keyframes animatezoom {
+                from {-webkit-transform: scale(0)} 
+                to {-webkit-transform: scale(1)}
+                }
+                
+                @keyframes animatezoom {
+                from {transform: scale(0)} 
+                to {transform: scale(1)}
+            }
+            
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+                span.psw {
+                    display: block;
+                    float: none;
+                }
+                .cancelbtn {
+                    width: 100%;
+                }
+            }
+    </style>
+    {% endblock header %}
+
+    {% block body %}{% endblock body %}
+
+
+    {% block footer %}
+    <footer class="footer-logo">
+        <div>
+            <a href="https://www.facebook.com/mtlville">
+                <img src="/static/images/facebook.png" class="icon"></a>
+            <a href="https://www.linkedin.com/company/ville-de-montr-al/">
+                <img src="/static/images/linkedin.png" class="icon"></a>
+            <a href="https://twitter.com/mtl_ville">
+                <img src="/static/images/twitter.png" class="icon"></a>
+            <a href="https://www.youtube.com/user/MTLVille">
+                <img src="/static/images/youtube.png" class="icon"></a>
+        </div>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Nous joindre</a></li>
+            <li><a href="#">Travailler avec nous</a></li>
+        </ul>
+        <p class="copyright">Ville de Montréal © 2022</p>
+    </footer>
+    {% endblock footer %}
+</body>
+</html>

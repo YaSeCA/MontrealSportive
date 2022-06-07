@@ -1,0 +1,301 @@
+<!DOCTYPE HTML><html><head><title>Les APIs REST du site web des installations sportives de la ville de Montréal</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="generator" content="https://github.com/raml2html/raml2html 7.8.0"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script><script type="text/javascript">
+      $(document).ready(function() {
+  $('.page-header pre code, .top-resource-description pre code, .modal-body pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+  $('[data-toggle]').click(function() {
+    var selector = $(this).data('target') + ' pre code';
+    $(selector).each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });
+
+  // open modal on hashes like #_action_get
+  $(window).bind('hashchange', function(e) {
+    var anchor_id = document.location.hash.substr(1); //strip #
+    var element = $('#' + anchor_id);
+
+    // do we have such element + is it a modal?  --> show it
+    if (element.length && element.hasClass('modal')) {
+      element.modal('show');
+    }
+  });
+
+  // execute hashchange on first page load
+  $(window).trigger('hashchange');
+
+  // remove url fragment on modal hide
+  $('.modal').on('hidden.bs.modal', function() {
+    try {
+      if (history && history.replaceState) {
+          history.replaceState({}, '', '#');
+      }
+    } catch(e) {}
+  });
+});
+    </script><style>
+      .hljs {
+  background: transparent;
+}
+.parent {
+  color: #999;
+}
+.list-group-item > .badge {
+  float: none;
+  margin-right: 6px;
+}
+.panel-title > .methods {
+  float: right;
+}
+.badge {
+  border-radius: 0;
+  text-transform: uppercase;
+  width: 70px;
+  font-weight: normal;
+  color: #f3f3f6;
+  line-height: normal;
+}
+.badge_get {
+  background-color: #63a8e2;
+}
+.badge_post {
+  background-color: #6cbd7d;
+}
+.badge_put {
+  background-color: #22bac4;
+}
+.badge_delete {
+  background-color: #d26460;
+}
+.badge_patch {
+  background-color: #ccc444;
+}
+.list-group,
+.panel-group {
+  margin-bottom: 0;
+}
+.panel-group .panel+.panel-white {
+  margin-top: 0;
+}
+.panel-group .panel-white {
+  border-bottom: 1px solid #F5F5F5;
+  border-radius: 0;
+}
+.panel-white:last-child {
+  border-bottom-color: white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.panel-white .panel-heading {
+  background: white;
+}
+.tab-pane ul {
+  padding-left: 2em;
+}
+.tab-pane h1 {
+  font-size: 1.3em;
+}
+.tab-pane h2 {
+  font-size: 1.2em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ddd;
+}
+.tab-pane h3 {
+  font-size: 1.1em;
+}
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+#sidebar {
+  margin-top: 30px;
+  padding-right: 5px;
+  overflow: auto;
+  height: 90%;
+}
+.top-resource-description {
+  border-bottom: 1px solid #ddd;
+  background: #fcfcfc;
+  padding: 15px 15px 0 15px;
+  margin: -15px -15px 10px -15px;
+}
+.resource-description {
+  border-bottom: 1px solid #fcfcfc;
+  background: #fcfcfc;
+  padding: 15px 15px 0 15px;
+  margin: -15px -15px 10px -15px;
+}
+.resource-description p:last-child {
+  margin: 0;
+}
+.list-group .badge {
+  float: left;
+}
+.method_description {
+  margin-left: 85px;
+}
+.method_description p:last-child {
+  margin: 0;
+}
+.list-group-item {
+  cursor: pointer;
+}
+.list-group-item:hover {
+  background-color: #f5f5f5;
+}
+pre code {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+.items {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+}
+.examples {
+  margin-left: 0.5em;
+}
+.resource-modal li > ul {
+  margin-bottom: 1em;
+}
+.required {
+  color: #f00;
+}
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Les APIs REST du site web des installations sportives de la ville de Montréal <small>version 1.0</small></h1><p>http://127.0.0.1:5000/api</p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="api" class="panel-title">/api</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_api_installations"><span class="parent">/api</span>/installations</a> <span class="methods"><a href="#api_installations_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_api_installations" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#api_installations_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Retrieve all the facilities from a specified area</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="api_installations_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/api</span>/installations</h4></div><div class="modal-body"><div class="alert alert-info"><p>Retrieve all the facilities from a specified area</p></div><ul class="nav nav-tabs"><li class="active"><a href="#api_installations_get_request" data-toggle="tab">Request</a></li><li><a href="#api_installations_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="api_installations_get_request"><h3>Query Parameters</h3><ul><li><strong>arrondissement</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="api_installations_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>The list of facilities was correctly returned</p><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: installations</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+    "Example": "http://127.0.0.1:5000/api/installations?arrondissement=LaSalle",
+    "Installations_Aquatiques": [
+      {
+        "ADRESSE": "1 407, Rue Serre", 
+        "ARRONDISSE": "LaSalle", 
+        "EQUIPEME": null, 
+        "GESTION": "Priv\u00e9", 
+        "ID_UEV": 4039115, 
+        "LAT": 45.432989, 
+        "LONG": -73.622005, 
+        "NOM": "Parc Ouellette (natation et r\u00e9cr\u00e9atif)", 
+        "POINT_X": "295254,0967", 
+        "POINT_Y": "5032569894", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine ext\u00e9rieure"
+      }, 
+      {
+        "ADRESSE": "1 411, Rue Lapierre", 
+        "ARRONDISSE": "LaSalle", 
+        "EQUIPEME": "Complexe aquatique", 
+        "GESTION": "Priv\u00e9", 
+        "ID_UEV": 4156343, 
+        "LAT": 45.43654, 
+        "LONG": -73.608196, 
+        "NOM": "L\u2019Aquad\u00f4me LaSalle", 
+        "POINT_X": "296335,6987", 
+        "POINT_Y": "5032962552", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      } 
+    ]
+  }</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>[object Object]</p></div></div></div></div></div></div></div><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_api_installation_nom"><span class="parent">/api</span>/installation-nom</a> <span class="methods"><a href="#api_installation_nom_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_api_installation_nom" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#api_installation_nom_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Retrieve a facilitie based on its name</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="api_installation_nom_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/api</span>/installation-nom</h4></div><div class="modal-body"><div class="alert alert-info"><p>Retrieve a facilitie based on its name</p></div><ul class="nav nav-tabs"><li class="active"><a href="#api_installation_nom_get_request" data-toggle="tab">Request</a></li><li><a href="#api_installation_nom_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="api_installation_nom_get_request"><h3>Query Parameters</h3><ul><li><strong>nom</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="api_installation_nom_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>The list of facilities was correctly returned</p><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: installations</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+    "Example": "http://127.0.0.1:5000/api/installation-nom?nom=Complexe%20sportif%20Claude-Robillard",
+    "Installations_Aquatiques": [
+      {
+        "ADRESSE": "1 000, Avenue \u00c9mile-Journeault Est", 
+        "ARRONDISSE": "Ahuntsic-Cartierville", 
+        "EQUIPEME": "Complexe aquatique", 
+        "GESTION": "Municipale", 
+        "ID_UEV": 3114253, 
+        "LAT": 45.552526, 
+        "LONG": -73.63639, 
+        "NOM": "Complexe sportif Claude-Robillard", 
+        "POINT_X": "294151,2717", 
+        "POINT_Y": "5045855457", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      }
+    ]
+  }</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>[object Object]</p></div></div></div></div></div></div></div><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_api_installation_type"><span class="parent">/api</span>/installation-type</a> <span class="methods"><a href="#api_installation_type_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_api_installation_type" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#api_installation_type_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Retrieve all the facilities of a specified type into a json</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="api_installation_type_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/api</span>/installation-type</h4></div><div class="modal-body"><div class="alert alert-info"><p>Retrieve all the facilities of a specified type into a json</p></div><ul class="nav nav-tabs"><li class="active"><a href="#api_installation_type_get_request" data-toggle="tab">Request</a></li><li><a href="#api_installation_type_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="api_installation_type_get_request"><h3>Query Parameters</h3><ul><li><strong>type</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="api_installation_type_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>The list of facilities was correctly returned</p><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: installations</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+    "Example":"http://127.0.0.1:5000/api/installation-type?type=aquatique",
+    "Installations_Aquatiques": [
+      {
+        "ADRESSE": "955, Rue Marie-Anne Est", 
+        "ARRONDISSE": "Le Plateau-Mont-Royal", 
+        "EQUIPEME": "Piscine r\u00e9cr\u00e9ative", 
+        "GESTION": "Municipale", 
+        "ID_UEV": 1017231, 
+        "LAT": 45.526243, 
+        "LONG": -73.577899, 
+        "NOM": "Bain L\u00e9vesque", 
+        "POINT_X": "298715,0666", 
+        "POINT_Y": "5042928684", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      }, 
+      {
+        "ADRESSE": "1 875, Avenue Morgan", 
+        "ARRONDISSE": "Mercier\u2013Hochelaga-Maisonneuve", 
+        "EQUIPEME": "Piscine r\u00e9cr\u00e9ative", 
+        "GESTION": "Municipale", 
+        "ID_UEV": 2065901, 
+        "LAT": 45.553456, 
+        "LONG": -73.538296, 
+        "NOM": "Bain Morgan", 
+        "POINT_X": "301810,6112", 
+        "POINT_Y": "5045950116", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      }, 
+      {
+        "ADRESSE": "1\u00a0550, Rue Dufresne", 
+        "ARRONDISSE": "Ville-Marie", 
+        "EQUIPEME": "Piscine r\u00e9cr\u00e9ative", 
+        "GESTION": "Municipale", 
+        "ID_UEV": 1018523, 
+        "LAT": 45.52886, 
+        "LONG": -73.548969, 
+        "NOM": "Bain Quintal", 
+        "POINT_X": "300975,7246", 
+        "POINT_Y": "5043217592", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      }
+    ]
+  }</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>[object Object]</p></div></div></div></div></div></div></div><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_api_installation_type_xml"><span class="parent">/api</span>/installation-type-xml</a> <span class="methods"><a href="#api_installation_type_xml_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_api_installation_type_xml" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#api_installation_type_xml_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Retrieve all the facilities of a specified type into a xml</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="api_installation_type_xml_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/api</span>/installation-type-xml</h4></div><div class="modal-body"><div class="alert alert-info"><p>Retrieve all the facilities of a specified type into a xml</p></div><ul class="nav nav-tabs"><li class="active"><a href="#api_installation_type_xml_get_request" data-toggle="tab">Request</a></li><li><a href="#api_installation_type_xml_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="api_installation_type_xml_get_request"><h3>Query Parameters</h3><ul><li><strong>type</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="api_installation_type_xml_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>The list of facilities was correctly returned</p><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: installations</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;root&gt;
+    &lt;item type="dict"&gt;
+    &lt;ID_UEV type="int"&gt;1017231&lt;/ID_UEV&gt;
+    &lt;TYPE_ type="str"&gt;Piscine intérieure&lt;/TYPE_&gt;
+    &lt;NOM type="str"&gt;Bain Lévesque&lt;/NOM&gt;
+    &lt;ARRONDISSE type="str"&gt;Le Plateau-Mont-Royal&lt;/ARRONDISSE&gt;
+    &lt;ADRESSE type="str"&gt;955, Rue Marie-Anne Est&lt;/ADRESSE&gt;
+    &lt;PROPRIETE type="str"&gt;Municipale&lt;/PROPRIETE&gt;
+    &lt;GESTION type="str"&gt;Municipale&lt;/GESTION&gt;
+    &lt;POINT_X type="str"&gt;298715,0666&lt;/POINT_X&gt;
+    &lt;POINT_Y type="str"&gt;5042928684&lt;/POINT_Y&gt;
+    &lt;EQUIPEME type="str"&gt;Piscine récréative&lt;/EQUIPEME&gt;
+    &lt;LONG type="float"&gt;-73.577899&lt;/LONG&gt;
+    &lt;LAT type="float"&gt;45.526243&lt;/LAT&gt;
+    &lt;/item&gt;
+    &lt;item type="dict"&gt;
+    &lt;ID_UEV type="int"&gt;2065901&lt;/ID_UEV&gt;
+    &lt;TYPE_ type="str"&gt;Piscine intérieure&lt;/TYPE_&gt;
+    &lt;NOM type="str"&gt;Bain Morgan&lt;/NOM&gt;
+    &lt;ARRONDISSE type="str"&gt;Mercier–Hochelaga-Maisonneuve&lt;/ARRONDISSE&gt;
+    &lt;ADRESSE type="str"&gt;1 875, Avenue Morgan&lt;/ADRESSE&gt;
+    &lt;PROPRIETE type="str"&gt;Municipale&lt;/PROPRIETE&gt;
+    &lt;GESTION type="str"&gt;Municipale&lt;/GESTION&gt;
+    &lt;POINT_X type="str"&gt;301810,6112&lt;/POINT_X&gt;
+    &lt;POINT_Y type="str"&gt;5045950116&lt;/POINT_Y&gt;
+    &lt;EQUIPEME type="str"&gt;Piscine récréative&lt;/EQUIPEME&gt;
+    &lt;LONG type="float"&gt;-73.538296&lt;/LONG&gt;
+    &lt;LAT type="float"&gt;45.553456&lt;/LAT&gt;
+    &lt;/item&gt;
+&lt;/root&gt;</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>[object Object]</p></div></div></div></div></div></div></div><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_api_installation_type_csv"><span class="parent">/api</span>/installation-type-csv</a> <span class="methods"><a href="#api_installation_type_csv_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_api_installation_type_csv" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#api_installation_type_csv_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Retrieve all the facilities of a specified type into a csv</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="api_installation_type_csv_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/api</span>/installation-type-csv</h4></div><div class="modal-body"><div class="alert alert-info"><p>Retrieve all the facilities of a specified type into a csv</p></div><ul class="nav nav-tabs"><li class="active"><a href="#api_installation_type_csv_get_request" data-toggle="tab">Request</a></li><li><a href="#api_installation_type_csv_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="api_installation_type_csv_get_request"><h3>Query Parameters</h3><ul><li><strong>type</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="api_installation_type_csv_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>The list of facilities was correctly returned</p><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: installations</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>ID_UEV,TYPE,NOM,ARRONDISSE,ADRESSE,PROPRIETE,GESTION,POINT_X,POINT_Y,EQUIPEME,LONG,LAT
+3114253,Piscine intérieure,Complexe sportif Claude-Robillard,Ahuntsic-Cartierville,"1 000, Avenue Émile-Journeault Est",Municipale,Municipale,"294151,2717",5045855457,Complexe aquatique,-73.63639,45.552526
+5015454,Pataugeoire,Saint-Jean-Baptiste,Rivière-des-Prairies–Pointe-aux-Trembles,"1 048, Boulevard Saint-Jean-Baptiste",Municipale,Municipale,"304846,2071","5055625,72",,-73.49941,45.640521</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>[object Object]</p></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#api">/api</a></li></ul></div></div></div></div></body></html>

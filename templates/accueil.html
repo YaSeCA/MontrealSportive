@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+<div class="wrapper">
+    <div class="hero-img">
+        <img src="/static/images/mtl.jpg" alt="Des gens pratiquants des activités" class="cellulaire">
+    </div> 
+
+    <section class="hero-head">
+        <h1 class="title">Trouver les installations sportives extérieurs dans la ville de <span>Montréal</span></h1>
+        <p class="subhead">Piscines, Jeux d'eau, Plages, Pataugeoires, Patinoires, Glissages pour l'hiver</p>
+    </section>
+
+    <div>
+        <p>
+            Vous pouvez utiliser la barre de recherche pour afficher un tableau contenant l'information sur toutes 
+            les installations dans votre arrondissement à Montréal.
+        </p>
+        <p class="italic">
+            Vous pouvez aussi utiliser la première liste déroulante pour afficher un tableau contenant l'information sur une 
+            installation en particulier. Il faut d'abord cliquer sur le boutton <span>Générer la liste</span> pour voir les 
+            noms des installations.
+        <p>
+            Finalement, pouvez utiliser la deuxième liste déroulante pour afficher toutes les installations d'un même type.
+        </p>
+    </div>
+
+    <br>
+
+    <!--A5-->
+    <div class="recherche">
+        <label>Rechercher par arrondissement</label>
+        <input id="arrondissement">
+        <button class="cancelbtn" onclick="toArray()">Rechercher</button>
+        <button class="cancelbtn" onclick="hideArray()">Effacer</button>
+    </div>
+
+    </div>
+        <div id="instaH2" class="instaH2"></div>
+    </div> 
+        
+    </div>
+        <div id="aquaArray" class="aquaArray" align="center"></div>
+        <div id="glissArray" class="aquaArray" align="center"></div>
+    </div> 
+    <!--A5-->
+
+    <!--A6-->
+    <div class="recherche">
+        <div class="names">
+            <button class="cancelbtn" name="generate">Générer la liste</button>
+            <select name="select">
+                <option>Choisir une installation</option>
+            </select>
+            <button class="cancelbtn" onclick="hideArray2()">Effacer</button>
+
+        
+            </div>
+                <div id="nameArray" class="aquaArray" align="center"></div>
+            </div> 
+        </div>  
+    </div>  
+    <!--A6-->
+
+    <br>
+
+    <!--C1-->
+    <div class="recherche">
+        <label >Rechercher par type d'installation</label>
+        <select id="type">
+            <option >Veuillez choisir</option>
+            <option value="aquatique">Les installations aquatiques</option>
+            <option value="glissade">Les glissades</option>
+            <option value="patinoire">Les patinoires</option>
+        </select>    
+        <button class="cancelbtn" onclick="toArray3()">Rechercher</button>
+        <button class="cancelbtn" onclick="hideArray3()">Effacer</button>
+    </div>
+
+    </div>
+        <div id="typeTitle" class="instaH2"></div>
+    </div> 
+
+    </div>
+        <div id="typeArray" class="aquaArray" align="center"></div>
+    </div> 
+    <!--C1-->
+
+    <br>
+    <br>
+
+    <hr>
+
+    <div class="row">
+        <div class="column">
+            <a href="https://www.sportloisirmontreal.ca/">
+                <img src="/static/images/logo1.JPG" alt="Sports et loisirs de l'île de Montréal logo" style="width:100%" class="logo"></a>
+        </div>
+        <div class="column">
+            <a href="https://reseau-urls.quebec/">
+                <img src="/static/images/logo3.JPG" alt="Réseau des unités régionaires loisir et sport logo" style="width:100%" class="logo"></a>
+        </div>
+        <div class="column">
+            <a href="https://tmvpa.com/developpement-moteur">
+                <img src="/static/images/logo4.JPG" alt="T M V P A logo" style="width:100%" class="logo"></a>
+        </div>
+        <div class="column">
+            <a href="https://www.patinermontreal.ca/f/paysagee/patin-libre/sports-dequipe">
+                <img src="/static/images/logo5.png" alt="Patinoires Montréal logo" style="width:100%" class="logo"></a>
+        </div>
+        <div class="column">
+            <a href="https://www.desjardins.com/">
+                <img src="/static/images/logo6.png" alt="Desjardins logo" style="width:100%" class="logo"></a>
+        </div>
+    </div>
+
+    <hr>
+</div>
+{% endblock body %} 
+

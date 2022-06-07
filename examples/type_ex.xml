@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <item type="dict">
+    <ID_UEV type="int">1017231</ID_UEV>
+    <TYPE_ type="str">Piscine intérieure</TYPE_>
+    <NOM type="str">Bain Lévesque</NOM>
+    <ARRONDISSE type="str">Le Plateau-Mont-Royal</ARRONDISSE>
+    <ADRESSE type="str">955, Rue Marie-Anne Est</ADRESSE>
+    <PROPRIETE type="str">Municipale</PROPRIETE>
+    <GESTION type="str">Municipale</GESTION>
+    <POINT_X type="str">298715,0666</POINT_X>
+    <POINT_Y type="str">5042928684</POINT_Y>
+    <EQUIPEME type="str">Piscine récréative</EQUIPEME>
+    <LONG type="float">-73.577899</LONG>
+    <LAT type="float">45.526243</LAT>
+    </item>
+    <item type="dict">
+    <ID_UEV type="int">2065901</ID_UEV>
+    <TYPE_ type="str">Piscine intérieure</TYPE_>
+    <NOM type="str">Bain Morgan</NOM>
+    <ARRONDISSE type="str">Mercier–Hochelaga-Maisonneuve</ARRONDISSE>
+    <ADRESSE type="str">1 875, Avenue Morgan</ADRESSE>
+    <PROPRIETE type="str">Municipale</PROPRIETE>
+    <GESTION type="str">Municipale</GESTION>
+    <POINT_X type="str">301810,6112</POINT_X>
+    <POINT_Y type="str">5045950116</POINT_Y>
+    <EQUIPEME type="str">Piscine récréative</EQUIPEME>
+    <LONG type="float">-73.538296</LONG>
+    <LAT type="float">45.553456</LAT>
+    </item>
+</root>

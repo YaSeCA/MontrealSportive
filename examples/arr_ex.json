@@ -1,0 +1,33 @@
+{
+    "Example": "http://127.0.0.1:5000/api/installations?arrondissement=LaSalle",
+    "Installations_Aquatiques": [
+      {
+        "ADRESSE": "1 407, Rue Serre", 
+        "ARRONDISSE": "LaSalle", 
+        "EQUIPEME": null, 
+        "GESTION": "Priv\u00e9", 
+        "ID_UEV": 4039115, 
+        "LAT": 45.432989, 
+        "LONG": -73.622005, 
+        "NOM": "Parc Ouellette (natation et r\u00e9cr\u00e9atif)", 
+        "POINT_X": "295254,0967", 
+        "POINT_Y": "5032569894", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine ext\u00e9rieure"
+      }, 
+      {
+        "ADRESSE": "1 411, Rue Lapierre", 
+        "ARRONDISSE": "LaSalle", 
+        "EQUIPEME": "Complexe aquatique", 
+        "GESTION": "Priv\u00e9", 
+        "ID_UEV": 4156343, 
+        "LAT": 45.43654, 
+        "LONG": -73.608196, 
+        "NOM": "L\u2019Aquad\u00f4me LaSalle", 
+        "POINT_X": "296335,6987", 
+        "POINT_Y": "5032962552", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      } 
+    ]
+  }

@@ -1,0 +1,19 @@
+{
+    "Example": "http://127.0.0.1:5000/api/installation-nom?nom=Complexe%20sportif%20Claude-Robillard",
+    "Installations_Aquatiques": [
+      {
+        "ADRESSE": "1 000, Avenue \u00c9mile-Journeault Est", 
+        "ARRONDISSE": "Ahuntsic-Cartierville", 
+        "EQUIPEME": "Complexe aquatique", 
+        "GESTION": "Municipale", 
+        "ID_UEV": 3114253, 
+        "LAT": 45.552526, 
+        "LONG": -73.63639, 
+        "NOM": "Complexe sportif Claude-Robillard", 
+        "POINT_X": "294151,2717", 
+        "POINT_Y": "5045855457", 
+        "PROPRIETE": "Municipale", 
+        "TYPE_": "Piscine int\u00e9rieure"
+      }
+    ]
+  }

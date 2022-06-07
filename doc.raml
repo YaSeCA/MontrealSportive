@@ -1,0 +1,81 @@
+#%RAML 1.0
+title: Les APIs REST du site web des installations sportives de la ville de Montréal
+baseUri: http://127.0.0.1:5000/api
+version: 1.0
+
+annotationTypes: 
+    installations:
+        type: array
+
+/api:
+    /installations:
+        get:
+            description: Retrieve all the facilities from a specified area
+            queryParameters:
+                arrondissement: string
+            responses:
+                404:
+                    description: {arrondissement} is not valid or could not be found
+                200:
+                    description: The list of facilities was correctly returned
+                    body:
+                        application/json:
+                            type: installations
+                            example: !include ./examples/arr_ex.json
+    /installation-nom:
+        get:
+            description: Retrieve a facilitie based on its name
+            queryParameters:
+                nom: string
+            responses:
+                404:
+                    description: {nom} is not valid or could not be found
+                200:
+                    description: The list of facilities was correctly returned
+                    body:
+                        application/json:
+                            type: installations
+                            example: !include ./examples/name_ex.json
+    /installation-type:
+        get:
+            description: Retrieve all the facilities of a specified type into a json
+            queryParameters:
+                type: string
+            responses:
+                404:
+                    description: {type} is not valid or could not be found
+                200:
+                    description: The list of facilities was correctly returned
+                    body:
+                        application/json:
+                            type: installations
+                            example: !include ./examples/type_ex.json
+    /installation-type-xml:
+        get:
+            description: Retrieve all the facilities of a specified type into a xml
+            queryParameters:
+                type: string
+            responses:
+                404:
+                    description: {type} is not valid or could not be found
+                200:
+                    description: The list of facilities was correctly returned
+                    body:
+                        application/json:
+                            type: installations
+                            example: !include ./examples/type_ex.xml
+    /installation-type-csv:
+            get:
+                description: Retrieve all the facilities of a specified type into a csv
+                queryParameters:
+                    type: string
+                responses:
+                    404:
+                        description: {type} is not valid or could not be found
+                    200:
+                        description: The list of facilities was correctly returned
+                        body:
+                            application/json:
+                                type: installations
+                                example: !include ./examples/type_ex.csv
+                            
