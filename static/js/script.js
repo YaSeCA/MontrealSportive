@@ -73,7 +73,8 @@ function showTitle(installations, switchs)
 }
 
 /**
- * Make a table with information about a district's facilities
+ * Make a table with information about aquatique installations
+ * from a specific district
  * @param {*} js A parsed JSON file
  * @returns An array of HTML elements
  */
@@ -132,6 +133,13 @@ function hideArray()
   document.getElementById("glissArray").innerHTML = "";
 }
 
+
+/**
+ * Make a table with information about glissades installations
+ * from a specific district
+ * @param {*} js A parsed JSON file
+ * @returns An array of HTML elements
+ */
 function createTabGlissade(js) 
 {
   let array = 
@@ -165,55 +173,6 @@ function createTabGlissade(js)
   } 
   array += `</table>`;
   return array;
-}
-
-
-
-function createTabPatinoire(data) {
-  let tab = 
-  `
-  <h1>Voici la liste des Patinoire :</h1>
-  <tr>
-    <th>id</th>
-    <th>nom_arr</th>
-    <th>nom_pat</th>
-    <th>date_heure</th>
-    <th>ouvert</th>
-    <th>deblaye</th>
-    <th>arrose</th>
-    <th>resurface</th>
-   </tr>`;
-
-  if(i == true){
-      for (var i=0; i<data.length; i++) {
-          tab += `<tr> 
-      <td>${data[i][0]} </td>
-      <td>${data[i][1]} </td>
-      <td>${data[i][2]} </td>
-      <td>${data[i][3]} </td>
-      <td>${data[i][4]} </td>
-      <td>${data[i][5]} </td>
-      <td>${data[i][6]} </td>
-      <td>${data[i][7]} </td>
-      </tr>`;
-      }
-  }
-  else
-     for (var i=0; i<data.Patinoire.length; i++) {
-         tab += `<tr> 
-     <td>${data.Patinoire[i].id} </td>
-     <td>${data.Patinoire[i].nom_arr} </td>
-     <td>${data.Patinoire[i].nom_pat} </td>
-     <td>${data.Patinoire[i].date_heure} </td>
-     <td>${data.Patinoire[i].ouvert} </td>
-     <td>${data.Patinoire[i].deblaye} </td>
-     <td>${data.Patinoire[i].arrose} </td>
-     <td>${data.Patinoire[i].resurface} </td>
-     </tr>`;
-         
-     } 
-
-  return tab
 }
 
 //A6
