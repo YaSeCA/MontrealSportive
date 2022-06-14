@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS aquatique;
-DROP TABLE IF EXISTS patinoire;
 DROP TABLE IF EXISTS glissade;
-
+DROP TABLE IF EXISTS compte;
 
 CREATE TABLE aquatique (
   id INTEGER PRIMARY KEY,
@@ -17,17 +16,6 @@ CREATE TABLE aquatique (
   equipeme VARCHAR(255),
   long_ FLOAT,
   lat FLOAT
-);
-
-CREATE TABLE patinoire (
-  id INTEGER PRIMARY KEY,
-  nom_arr VARCHAR(255),
-  nom_pat VARCHAR(255),
-  date_heure TEXT,
-  ouvert VARCHAR(10),
-  deblaye VARCHAR(10),
-  arrose VARCHAR(10),
-  resurface VARCHAR(10)
 );
 
 CREATE TABLE glissade (
