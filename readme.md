@@ -2,8 +2,7 @@
 Dans le cadre du cours Programmation Web avancée, nous ont été introduites les méthodes avancées et les bonnes pratiques de conception et de développement d'applications Web modernes. Entre autres : infrastructure et cadre de développement Web ; intégration d'une base de données ; authentification ; conception de services web ; formats de sérialisation ; gestion d'erreurs ; interopérabilité ; déploiement de services ; tests de charge ; sécurité et patrons d'attaques spécifiques aux applications web.
 
 # Description du travail
-Il s'agit d'un site web permettant de trouver des installations sportives (de type aquatique, glissades et patinoires) dans la ville de Montréal. Le projet consiste à récupérer un ensemble de données provenant de la ville de Montréal et d'offrir des
-services à partir de ces données. 
+Il s'agit d'un site web permettant de trouver des installations sportives (aquatiques et glissades) dans la ville de Montréal. Le projet consiste à récupérer un ensemble de données provenant de la ville de Montréal et d'offrir des services (REST) à partir de ces données. 
 
 # Les technologies/APIs utilisées
 Python 3, SQLite 3, JavaScript, CSS 3, HTML 5, Jinja, ...
